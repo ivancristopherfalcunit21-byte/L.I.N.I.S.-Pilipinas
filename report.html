@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L.I.N.I.S. Pilipinas - Report</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  <div class="header-container">
+    <img src="logo.jpg" alt="L.I.N.I.S. Pilipinas Logo" class="logo-img">
+    <h1 class="site-title">L.I.N.I.S. Pilipinas</h1>
+    <nav>
+      <a href="homepage.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="report.html" class="active">Report</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Report Corruption</h1>
+    <p>
+      Your bravery matters. By reporting corruption, you help protect our nation,
+      promote fairness, and ensure justice for every Filipino citizen.
+      Your identity will be kept confidential.
+    </p>
+  </div>
+  <div class="hero-image">
+  </div>
+</section>
+
+<section class="info-section">
+  <h2>Report Form</h2>
+  <div class="info-box">
+    <form id="corruptionForm">
+      <label>Type of Corruption:</label>
+      <select required>
+        <option value="">Select type</option>
+        <option value="Bribery">Bribery</option>
+        <option value="Fraud">Fraud</option>
+        <option value="Embezzlement">Embezzlement</option>
+        <option value="Nepotism">Nepotism</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label>Location:</label>
+      <input type="text" placeholder="City / Institution" required>
+
+      <label>Date and Time:</label>
+      <input type="datetime-local" required>
+
+      <label>Describe the Incident:</label>
+      <textarea placeholder="Provide details here..." required></textarea>
+
+      <button type="submit" class="cta-button">Submit Report</button>
+    </form>
+  </div>
+</section>
+
+<script>
+document.getElementById("corruptionForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  alert("Thank you! Your report has been submitted confidentially.");
+  this.reset();
+});
+</script>
+
+<script>
+window.onload = () => {
+  document.body.classList.add("loaded");
+};
+</script>
+
+</body>
+</html>
+
+
+
